@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <title>To-Do</title>
+</head>
+
+<body>
+    <header>
+        <h1>To Do List</h1>
+        <p>Done by kur0h3i</p>
+    </header>
+    <main>
+        <div id="filter">
+            <input type="radio" id="filter_all" name="filter" value="all" checked>
+            <label for="filter_all">All</label><br>
+
+            <input type="radio" id="filter_noncompleted" name="filter" value="non-Completed">
+            <label for="filter_noncompleted">Non-Completed</label><br>
+
+            <input type="radio" id="filter_completed" name="filter" value="completed">
+            <label for="filter_completed">Completed</label><br>
+
+            <!-- Botón para cargar tareas desde la API -->
+            <button type="button" id="download_btn" title="Cargar tareas desde API">
+                <img src="src/img/descargar.png" alt="Cargar tareas" width="20" height="20">
+            </button>
+        </div>
+        <form>
+            <img src="src/img/icon_task.png" alt="" width="39">
+            <input id="task_info" type="text" placeholder="Task">
+            <input id="add_task" type="button" value="ADD">
+        </form>
+        <div id="task_container">
+            <ul id="task_list">
+
+            </ul>
+        </div>
+    </main>
+</body>
+
+</html>
