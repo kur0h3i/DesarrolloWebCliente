@@ -1,0 +1,119 @@
+/* Estilos para el componente Tarea */
+.tarea-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background-color: var(--bg-primary);
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  animation: slideIn 0.3s ease-out;
+  box-shadow: var(--shadow-sm);
+}
+
+.tarea-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-color);
+}
+
+.tarea-item.completada {
+  background: linear-gradient(135deg, var(--bg-success), var(--bg-primary));
+  border-color: var(--success-color);
+  opacity: 0.8;
+}
+
+.tarea-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: var(--success-color);
+  transform: scale(1.2);
+  transition: var(--transition);
+}
+
+.tarea-checkbox:hover {
+  transform: scale(1.3);
+}
+
+.tarea-texto {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  transition: var(--transition);
+  word-break: break-word;
+  padding: 4px 0;
+}
+
+.tarea-texto.completada {
+  text-decoration: line-through;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.tarea-eliminar {
+  background: linear-gradient(135deg, var(--danger-color), var(--danger-hover));
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+  white-space: nowrap;
+}
+
+.tarea-eliminar:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+  background: linear-gradient(135deg, var(--danger-hover), var(--danger-color));
+}
+
+.tarea-eliminar:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Efectos de entrada y salida */
+.tarea-item-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.tarea-item-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: var(--transition);
+}
+
+.tarea-item-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.tarea-item-exit-active {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: var(--transition);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .tarea-item {
+    padding: 12px;
+    gap: 8px;
+  }
+  
+  .tarea-texto {
+    font-size: 14px;
+  }
+  
+  .tarea-eliminar {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+}

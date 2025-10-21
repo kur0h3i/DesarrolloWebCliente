@@ -1,0 +1,70 @@
+/* Estilos para el componente CreadorTarea */
+.creador-tarea-container {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.creador-tarea-input {
+  flex: 1;
+  min-width: 250px;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 12px 16px;
+  font-size: 16px;
+  transition: var(--transition);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.creador-tarea-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+  outline: none;
+}
+
+.creador-tarea-input::placeholder {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.creador-tarea-btn {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+  box-shadow: var(--shadow-sm);
+}
+
+.creador-tarea-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+  background: linear-gradient(135deg, var(--primary-hover), var(--primary-color));
+}
+
+.creador-tarea-btn:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+.creador-tarea-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 480px) {
+  .creador-tarea-container {
+    flex-direction: column;
+  }
+  
+  .creador-tarea-input {
+    min-width: 100%;
+  }
+}

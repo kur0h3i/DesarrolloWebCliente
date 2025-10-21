@@ -1,0 +1,27 @@
+/* Estilos para el componente Imagen */
+.imagen-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.imagen-logo {
+  max-width: 200px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.imagen-logo:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 480px) {
+  .imagen-logo {
+    max-width: 150px;
+  }
+}
