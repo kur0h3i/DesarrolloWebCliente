@@ -31,7 +31,7 @@ export default function FormPreferencias({ información, datosIniciales }) {
     >
       <Form>
         <Field as="select" name="tipoEntrenamiento">
-          <option value="">🏋️ Selecciona tipo de entrenamiento</option>
+          <option value="">Tipo de entrenamiento</option>
           <option value="cardio">Cardio</option>
           <option value="fuerza">Fuerza</option>
           <option value="funcional">Funcional</option>
@@ -43,12 +43,12 @@ export default function FormPreferencias({ información, datosIniciales }) {
         <Field
           type="text"
           name="objetivos"
-          placeholder="🎯 Objetivos (ej: perder peso, ganar músculo)"
+          placeholder="Objetivos (ej: perder peso, ganar músculo)"
         />
         <ErrorMessage name="objetivos" component="div" />
 
         <Field as="select" name="disponibilidad">
-          <option value="">📅 Disponibilidad</option>
+          <option value="">Disponibilidad</option>
           <option value="mañana">Mañana</option>
           <option value="tarde">Tarde</option>
           <option value="noche">Noche</option>
