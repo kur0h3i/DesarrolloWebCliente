@@ -1,0 +1,38 @@
+.favorites-section {
+  margin-top: 3rem;
+  padding: 2rem 1rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+}
+
+.favorites-title {
+  text-align: center;
+  margin: 0 0 2rem 0;
+  font-size: 1.75rem;
+  color: #333;
+}
+
+.favorites-empty {
+  text-align: center;
+  color: #999;
+  font-size: 1.1rem;
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .favorites-section {
+    padding: 1.5rem 0.5rem;
+    margin-top: 2rem;
+  }
+
+  .favorites-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .favorites-title {
+    font-size: 1.25rem;
+  }
+}
